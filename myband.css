@@ -1,0 +1,573 @@
+body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+    margin: 0;
+    padding: 0;
+}
+h3,
+h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;
+    color: #111;
+    text-align: center;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #29BD53;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    align-items: center;
+}
+
+.main {
+    margin-top: 80px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #29BD53;
+}
+
+.navbar li {
+    float: left;
+//  border-right: 1px solid #bbb;
+    margin-right: 10px;
+}
+
+.brandtext {
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    padding: 20px 16px;
+}
+
+.brandlogo {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    text-decoration: none;
+    border: none;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 26px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+
+/* SLIDER */
+
+.slider-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+}
+
+.slider-container img {
+    max-width: 100%;
+}
+
+.menu {
+    position: absolute;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+    bottom: 0;
+}
+
+.menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #111111;
+    border-radius: 50px;
+    margin: 0 0.2em 1em;
+}
+
+.menu label:hover,
+.menu label:focus {
+    background: #1c87c9;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    /*z-index: 10;*/
+    padding: 8em 1em 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: left 0s 0.75s;
+}
+
+[id^="slide"]:checked+.slide {
+    left: 0;
+    z-index: 100;
+    transition: left 0.65s ease-out;
+}
+
+.slide-1 {
+    background-image: url("./photos/photo1.jpg");
+}
+
+.slide-2 {
+    background-image: url("./photos/photo2.jpg");
+}
+
+.slide-3 {
+    background-image: url("./photos/photo3.jpg");
+}
+
+.intro {
+    background: #fff;
+    padding: 60px 30px;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 18pt;
+    padding-bottom: 15px;
+}
+
+.intro p {
+    font-size: 14px;
+}
+
+
+/*
+
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+}
+
+.btn:hover,
+.btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+
+.modal-header,
+h4,
+.close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+}
+
+.modal-header,
+.modal-body {
+    padding: 40px 50px;
+}
+
+.nav-tabs li a {
+    color: #777;
+}
+
+.navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+    height: 75px;
+    vertical-align: middle;
+}
+
+.navbar li a,
+.navbar .navbar-brand {
+    color: #ffffff !important;
+}
+
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+.open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+}
+
+.dropdown-menu li a {
+    color: #000 !important;
+}
+
+.dropdown-menu li a:hover {
+    background-color: red !important;
+}
+*/
+
+
+/* Dlgs */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Full-width input fields */
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/* Set a style for all buttons */
+
+button {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    /*width: 100%;*/
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+/* Extra styles for the cancel button */
+
+.okbtn {
+    background-color: #04AA6D;
+}
+
+.cancelbtn {
+    background-color: #f44336;
+}
+
+.uploadcancelbtn {
+    background-color: #f44336;
+}
+
+.addbtn {
+    background-color: #363337;
+}
+
+.uploadbtn {
+    background-color: #026e71;
+}
+
+.downloadbtn {
+    background-color: #b4bb53;
+}
+
+.editbtn {
+    background-color: #6d0382;
+}
+
+
+/* Center the image and position the close button */
+
+.dlgheadcontainer {
+    text-align: center;
+    margin: 24px 12px 12px 12px;
+    position: relative;
+    background-color: #333;
+}
+
+.dlgheadcontainer h1 {
+    color: white;
+}
+
+.dlgcontainer {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 200;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 500px;
+    /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button (x) */
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+
+/* Add Zoom Animation */
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+
+/* --------------- */
+
+footer {
+    text-align: center;
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+}
+
+footer a {
+    color: #f5f5f5;
+}
+
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}
+
+
+/* SETLIST */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    text-align: center;
+    padding: 8px;
+    background-color: #2d2d30;
+}
+
+td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+.headersort {
+    text-align: center;
+}
+
+.align-middle {
+    text-align: center;
+}
+
+.headersort a {
+    color: #ffffff !important;
+}
+
+.headersort a:hover {
+    color: #fff !important;
+}
+
+.headersort .active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+}
+
+.headersearch {
+    text-align: left;
+}
+
+.searchinput {
+    color: #444;
+    font-size: large;
+}
+
+.filter {
+    color: white;
+    font-size: large;
+}
+
+.formcontact input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.formcontact input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formcontact input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.formcontact {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.contactbar {
+    width: 50%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+
+.contactbar ul {
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20;
+}
+
+.contactbar li {
+    list-style-type: none;
+    align-items: center;
+    text-align: center;
+    float: left;
+    padding: 25px 16px;
+}
+
+.contactbaritem {}
